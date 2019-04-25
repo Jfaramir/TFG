@@ -1,8 +1,13 @@
 
  function onSingin(googleUser) {
          var _nombre = googleUser.getBasicProfile().getName();
-        $('#contenedor').load("principal.php", {
-            nombre: _nombre
+         var _email = googleUser.getBasicProfile().getEmail();
+         var _id = googleUser.getBasicProfile().getId();
+
+        $('#contenedor').load("nuevoUsuario.php", {
+            nombre: _nombre,
+            email: _email,
+            id: _id
         });
       
         console.log("entra");

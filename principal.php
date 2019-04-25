@@ -1,5 +1,5 @@
 <?php
-echo $_POST['nombre'];
+echo ' holaa';
 
 /* 
  * To change this license header, choose License Headers in Project Properties.
