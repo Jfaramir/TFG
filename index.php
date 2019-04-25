@@ -12,7 +12,7 @@
     <link href="styles/main.css" rel="stylesheet">
   </head>
   <body id="top"><div class="site-wrapper">
-  <div class="site-wrapper-inner">
+  <div id="contenedor"  class="site-wrapper-inner">
     <div class="cover-container">
       <div class="masthead clearfix">
         <div class="inner">
@@ -32,7 +32,7 @@
         <div class="g-signin2" data-onsuccess="onSingin" style="margin-left: 45%; margin-top: 5%" ></div>
       </div>
       <div class="mastfoot">
-          <div id="contenedor" class="inner">
+          <div class="inner">
           <p>&copy; Recordator. <a href="https://recordator.com/" target="_blank">RecordatorTecnologies</a>.</p>
         </div>
       </div>
@@ -64,11 +64,13 @@
     </div>
   </div>
 </div>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="scripts/login.js"></script>
+        <script scr="js/bootstrap.min.js" type="text/javascript"></script>
+
   </body>
 </html>
