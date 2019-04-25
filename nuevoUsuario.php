@@ -8,7 +8,7 @@ echo $nombre;
 
 $mysqli = conectaBBDD();
 
- $resultado= $mysqli -> query("INSERT INTO recordator('id','email','nombre') VALUES('$id','$email','$nombre')");
+ $resultado= $mysqli -> query("INSERT INTO usuarios(id,email,nombre) VALUES('$id','$email','$nombre')");
 
  require 'principal.php';
 
