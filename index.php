@@ -32,7 +32,7 @@
         <div class="g-signin2" data-onsuccess="onSingin" style="margin-left: 45%; margin-top: 5%" ></div>
       </div>
       <div class="mastfoot">
-        <div class="inner">
+          <div id="contenedor" class="inner">
           <p>&copy; Recordator. <a href="https://recordator.com/" target="_blank">RecordatorTecnologies</a>.</p>
         </div>
       </div>
@@ -69,6 +69,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-
+    <script src="scripts/login.js"></script>
   </body>
 </html>
