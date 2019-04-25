@@ -28,7 +28,7 @@
         <h1 class="cover-heading">Recordator</h1>
         <p class="lead cover-copy">La aplicaccion que te ayudara a organizar tu vida.</p>
         <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Iniciar Sesion</button>
-            <button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Iniciar con google</button></p>
+            <button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Crear</button></p>
         
       </div>
       <div class="mastfoot">
