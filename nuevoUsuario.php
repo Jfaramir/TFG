@@ -8,8 +8,10 @@ echo $nombre;
 
 $mysqli = conectaBBDD();
 
- $resultado= $mysqli -> query("INSERT INTO usuarios(id,email,nombre) VALUES('$id','$email','$nombre')");
-
+ $resultado= $mysqli -> query("INSERT INTO usuarios(email,nombre) VALUES('$email','$nombre')");
+if (!$resultado) {
+   printf("Errormessage: %s\n", $mysqli->error);
+} $mysqli ->close();
  require 'principal.php';
 
 
