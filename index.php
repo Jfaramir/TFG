@@ -16,7 +16,7 @@
     <div class="cover-container">
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand">Recordaor</h3>
+          <h3 class="masthead-brand">Recordator</h3>
           <nav class="nav nav-masthead">
             <a class="nav-link nav-social" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a class="nav-link nav-social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -40,7 +40,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="subscribeModalLabel">Get Notified on Launch:</h5>
+              <h5 class="modal-title" id="subscribeModalLabel">Crear Nuevo Usuario</h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -48,13 +48,16 @@
             <div class="modal-body">
               <form>
                 <div class="form-group">
-                  <label for="recipient-name" class="form-control-label">Enter you e-mail to get notified when we launch</label>
+                  <label for="recipient-name" class="form-control-label">e-mail</label>
                   <input type="text" class="form-control" id="recipient-name" placeholder="your-name@example.com">
+                  <p></p>
+                  <label for="recipient-name" class="form-control-label">Password</label>
+                  <input type="pasword" class="form-control" id="recipient-name" placeholder="**********">
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default">Subscribe</button>
+              <button type="button" class="btn btn-default">Crear</button>
             </div>
           </div>
         </div>
