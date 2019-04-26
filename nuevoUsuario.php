@@ -14,7 +14,7 @@ $resultado2 = mysqli_fetch_array($consulta);
 echo $resultado2['email'];
 echo $email;
  */
- if ($resultado2['email'] == $email) {
+ if ($resultado2['email']) {
      require 'principal.php';
 
 } else {
@@ -23,7 +23,7 @@ $resultado = $mysqli->query("INSERT INTO usuarios(email,nombre) VALUES('$email',
 require_once 'principal.php';
   
 } 
-  if (!$resultado) {
+  if (!$resultado2) {
         printf("Errormessage: %s\n", $mysqli->error);
   } $mysqli->close();
  
