@@ -16,11 +16,15 @@ echo $email;
  */
  if ($resultado2['email'] == $email) {
      require 'principal.php';
+
 } else {
     
 $resultado = $mysqli->query("INSERT INTO usuarios(email,nombre) VALUES('$email','$nombre')");
 require_once 'principal.php';
+  
+} 
+  if (!$resultado) {
+        printf("Errormessage: %s\n", $mysqli->error);
+  } $mysqli->close();
+ 
 
-    
-    
-}
