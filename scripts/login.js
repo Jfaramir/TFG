@@ -1,5 +1,6 @@
 
  function onSingin(googleUser) {
+ 
          var _nombre = googleUser.getBasicProfile().getName();
          var _email = googleUser.getBasicProfile().getEmail();
          var _id = googleUser.getBasicProfile().getId();
@@ -9,7 +10,7 @@
             email: _email,
             id: _id
         });
-      
+        
         console.log("entra");
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
     }
