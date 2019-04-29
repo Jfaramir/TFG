@@ -11,8 +11,9 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
   </head>
-  <body id="top"><div class="site-wrapper">
-  <div id="contenedor"  class="site-wrapper-inner">
+  <body id="contenedor">
+      <div class="site-wrapper">
+  <div   class="site-wrapper-inner">
     <div class="cover-container">
       <div class="masthead clearfix">
         <div class="inner">
@@ -24,18 +25,24 @@
             <a class="nav-link nav-social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </nav>
         </div>
-      </div><br>      <div class="inner cover">
+      </div>
+        <br>   
+        <div class="inner cover">
         <h1 class="cover-heading">Recordator</h1>
         <p class="lead cover-copy">La aplicaccion que te ayudara a organizar tu vida.</p>
         <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Iniciar Sesion</button>
-            <button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Iniciar con google</button></p>
-        <div class="g-signin2" data-onsuccess="onSingin" style="margin-left: 45%; margin-top: 5%" ></div>
+            <button  type="button" class="g-signin2 btn btn-lg btn-default btn-notify" data-onsuccess="onSingin" data-toggle="modal" data-target="#subscribeModal">Iniciar con google</button></p>
+        <!--<div class="g-signin2" data-onsuccess="onSingin" style="margin-left: 45%; margin-top: 5%" ></div>-->
       </div>
       <div class="mastfoot">
           <div class="inner">
           <p>&copy; Recordator. <a href="https://recordator.com/" target="_blank">RecordatorTecnologies</a>.</p>
         </div>
       </div>
+     
+      
+      
+      
       <div class="modal fade" id="subscribeModal" tabindex="-1" role="dialog" aria-labelledby="subscribeModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -52,7 +59,7 @@
                   <input type="text" class="form-control" id="recipient-name" placeholder="your-name@example.com">
                   <p></p>
                   <label for="recipient-name" class="form-control-label">Password</label>
-                  <input type="pasword" class="form-control" id="recipient-name" placeholder="**********">
+                  <input type="password" class="form-control" id="recipient-name" placeholder="**********">
                 </div>
               </form>
             </div>
