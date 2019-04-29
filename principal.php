@@ -67,6 +67,8 @@
     <!-- /#page-content-wrapper -->
 
   </div>
+          </div>
+
   <!-- /#wrapper -->
 
   <!-- Bootstrap core JavaScript -->
@@ -80,7 +82,6 @@
     });
   </script>
 
-</body>
 
 </html>
 
@@ -89,8 +90,6 @@
         
   
 
-    </div>
     
     
-</html>
 
