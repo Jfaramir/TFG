@@ -28,5 +28,5 @@ PRIMARY KEY (id),
 FOREIGN KEY (id_grupo) REFERENCES grupos (id) on delete cascade,
 FOREIGN KEY (email_usuario) REFERENCES usuarios (email) on delete cascade
 ) ;
-
+--https://victorroblesweb.es/2013/11/18/tutorial-mvc-en-php-nativo/
 
