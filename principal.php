@@ -14,13 +14,8 @@
     <!-- Sidebar -->
     <div class="bg-dark border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Start Bootstrap </div>
-      <div class="list-group ">
-        <a href="#" class="list-group-item list-group-item-action bg-dark">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">Shortcuts</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">Overview</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">Events</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark">Status</a>
+      <div id="grupos" class="list-group "style="overflow-y: auto; height:500px; ">
+        
       </div>
     </div>
    
@@ -29,7 +24,6 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -59,9 +53,7 @@
       </nav>
 
       <div class="container-fluid">
-        <h1 class="mt-4">Simple Sidebar</h1>
-        <p>The starting state of the menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
-        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>. The top navbar is optional, and just for demonstration. Just create an element with the <code>#menu-toggle</code> ID which will toggle the menu when clicked.</p>
+
       </div>
     </div>
     <!-- /#page-content-wrapper -->
@@ -80,6 +72,7 @@
       e.preventDefault();
       $("#wrapper").toggleClass("toggled");
     });
+    $("#grupos").load('cargaGrupos.php');
   </script>
 
 
