@@ -14,7 +14,7 @@
     <!-- Sidebar -->
     <div class="bg-dark border-right" id="sidebar-wrapper">
       <div class="sidebar-heading">Start Bootstrap </div>
-      <div id="grupos" class="list-group "style="overflow-y: auto; height:500px; ">
+      <div id="grupos" class="list-group " style="overflow-y: auto; height:500px; ">
         
       </div>
     </div>
@@ -61,18 +61,20 @@
   </div>
           </div>
 
-  <!-- /#wrapper -->
 
-  <!-- Bootstrap core JavaScript -->
   
 
-  <!-- Menu Toggle Script -->
+ 
   <script>
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
+      var _email = <?php echo $email?>
+    //side var acction
+    $("#grupos").load('cargaGrupos.php',{
+        email: _email
     });
-    $("#grupos").load('cargaGrupos.php');
+    
+    
+    
+    
   </script>
 
 

@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en-US">
+
+
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-signin-client_id" content="1091108886907-tvhss5q44oavsrl1hkco0vnrlut4siv0.apps.googleusercontent.com"">
+    <meta name="google-signin-client_id" content="1091108886907-tvhss5q44oavsrl1hkco0vnrlut4siv0.apps.googleusercontent.com">
     <title>Recordator</title>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
@@ -79,4 +79,3 @@
     <script src="scripts/login.js"></script>
         <script scr="js/bootstrap.min.js" type="text/javascript"></script>
   </body>
-</html>
