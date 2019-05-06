@@ -1,6 +1,7 @@
 <?php
 
         $nombre;
+        echo 'principal';
 ?>
 <html>
       <link href="styles/simple-sidebar.css" rel="stylesheet">

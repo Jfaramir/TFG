@@ -1,7 +1,7 @@
 <?php
 
 $mysqli = conectaBBDD();
-print_r($email) ;
+echo 'cargaGrupos';2
 $resultado = $mysqli->query("select * from grupos ");
 $numGrupos = $resultado->num_rows;
 
