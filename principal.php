@@ -67,7 +67,7 @@
 
  
   <script>
-      var _email = <?php echo $email?>
+      var _email = <?php $email?>
     //side var acction
     $("#grupos").load('cargaGrupos.php',{
         email: _email

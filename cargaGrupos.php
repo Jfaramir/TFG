@@ -1,11 +1,14 @@
 <?php
 
+include ('misFunciones.php');
+
 $mysqli = conectaBBDD();
-echo 'cargaGrupos';2
+echo 'cargaGrupos';
 $resultado = $mysqli->query("select * from grupos ");
 $numGrupos = $resultado->num_rows;
 
 $listaGrupos = array();
+
 for ($i = 0; $i < $numGrupos; $i++) {
     $r = $resultado->fetch_array(); //leo una fila del resultado de la query
     $listaGrupos[$i][0] = $r['id'];
