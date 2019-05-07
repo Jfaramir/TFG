@@ -33,7 +33,7 @@
         <h1 class="cover-heading">Recordator</h1>
         <p class="lead cover-copy">La aplicaccion que te ayudara a organizar tu vida.</p>
         <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Iniciar Sesion</button>
-            <button  type="button" class="g-signin2 btn btn-lg btn-default btn-notify" data-onsuccess="onSingin" data-toggle="modal" >Iniciar con google</button></p>
+            <button  type="button" class="g-signin2 btn btn-lg btn-default btn-notify" data-onsuccess="onSingin" data-toggle="modal"  >Iniciar con google</button></p>
         <!--<div class="g-signin2" data-onsuccess="onSingin" style="margin-left: 45%; margin-top: 5%" ></div>-->
       </div>
       <div class="mastfoot">
@@ -57,16 +57,19 @@
             <div class="modal-body">
               <form>
                 <div class="form-group">
-                  <label for="recipient-name" class="form-control-label">e-mail</label>
+                    <label for="recipient-name"  class="form-control-label">e-mail</label>
                   <input type="text" class="form-control" id="recipient-name" placeholder="your-name@example.com">
                   <p></p>
+                    <label for="recipient-name"  class="form-control-label">Nombre</label>
+                  <input type="text" class="form-control" id="recipient-name2" placeholder="your-name">
+                  <p></p>
                   <label for="recipient-name" class="form-control-label">Password</label>
-                  <input type="password" class="form-control" id="recipient-name" placeholder="**********">
+                  <input type="password" class="form-control" id="recipient-name3" placeholder="**********">
                 </div>
               </form>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-onsuccess="onSingin">Entrar</button>
+                <button type="button" id="ButtonEntrar" class="btn btn-default"  onclick="entrar()">Entrar</button>
             </div>
           </div>
         </div>
@@ -80,4 +83,20 @@
     <script src="scripts/main.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="scripts/login.js"></script>
+    
+    <script> 
+        function entrar(){
+            var _cajaNombre = $('#recipient-name').val();
+            var _cajaPassword = $('#recipient-name3').val();
+            var _nombre = $('#recipient-name2').val();
+
+        $('#contenedor').load("nuevoUsuario.php", {
+            email: _cajaNombre,
+            nombre: _nombre,
+            password: _cajaPassword
+        });
+           
+        }
+    </script>
+    
   </body>

@@ -8,7 +8,7 @@ $mysqli = conectaBBDD();
 echo 'cargaGrupos';
 
 $email = $_POST['email'];
-$resultado = $mysqli->query("select * from grupos "/*inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)"*/);
+$resultado = $mysqli->query("select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)");
 
 //select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)
 $numGrupos = $resultado->num_rows;

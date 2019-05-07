@@ -15,7 +15,18 @@
       console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
     }
     
+/*    
+     function entrar(){
+            var _cajaNombre = $('#recipient-name').val();
+            var _cajaPassword = $('#recipient-name2').val();
 
+        $('#contenedor').load("nuevoUsuario.php", {
+            email: _cajaNombre,
+            password: _cajaPassword
+        });
+           
+        }
+*/
 function onFailure(error) {
       console.log(error);
     }

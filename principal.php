@@ -46,15 +46,15 @@
                 <a class="dropdown-item" href="#">Action</a>
                 <a class="dropdown-item" href="#">Another action</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#">Something else here</a>
+                <a class="dropdown-item" href="#">Something else here </a>
               </div>
             </li>
           </ul>
         </div>
       </nav>
 
-      <div class="container-fluid">
-
+      <div class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px;" >
+          <p>asdasd</p>
       </div>
     </div>
     <!-- /#page-content-wrapper -->
