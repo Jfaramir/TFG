@@ -19,10 +19,10 @@
         <div class="inner">
           <h3 class="masthead-brand">Recordator</h3>
           <nav class="nav nav-masthead">
-            <a class="nav-link nav-social" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a class="nav-link nav-social" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a class="nav-link nav-social" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-            <a class="nav-link nav-social" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="https://twitter.com/?lang=es"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="https://aboutme.google.com/u/0/?referer=gplus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+            <a class="nav-link nav-social" href="https://www.instagram.com/?hl=es"><i class="fa fa-instagram" aria-hidden="true"></i></a>
           </nav>
         </div>
                   </div>
@@ -33,7 +33,7 @@
         <h1 class="cover-heading">Recordator</h1>
         <p class="lead cover-copy">La aplicaccion que te ayudara a organizar tu vida.</p>
         <p class="lead"><button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Iniciar Sesion</button>
-            <button  type="button" class="g-signin2 btn btn-lg btn-default btn-notify" data-onsuccess="onSingin" data-toggle="modal"  >Iniciar con google</button></p>
+            <button  type="button" class="g-signin2 btn btn-lg btn-default btn-notify" data-onsuccess="onSingin" data-toggle="modal" >Iniciar con google</button></p>
         <!--<div class="g-signin2" data-onsuccess="onSingin" style="margin-left: 45%; margin-top: 5%" ></div>-->
       </div>
       <div class="mastfoot">
