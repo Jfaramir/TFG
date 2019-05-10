@@ -55,7 +55,7 @@
       </nav>
 
       <div class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px;" >
-          <p>asdasd</p>
+          <p>CargaTareas</p>
       </div>
     </div>
     <!-- /#page-content-wrapper -->
