@@ -12,7 +12,8 @@ CREATE TABLE `users` (
   `locale` varchar(10)  DEFAULT NULL,
   `picture` varchar(255)  DEFAULT NULL,
   `link` varchar(255) ,
-  primary key (`id`)
+  primary key (`id`),
+  unique key (`email`)
 
 ) ;
 

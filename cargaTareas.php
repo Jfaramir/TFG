@@ -7,8 +7,8 @@ include ('misFunciones.php');
 $mysqli = conectaBBDD();
 echo 'cargaTareas';
 
-$id_grupo = $_POST['id_grupo'];
-$resultado = $mysqli->query("");
+$id = $_POST['id'];
+$resultado = $mysqli->query("SELECT * FROM tareas where id = $id ");
 
 //select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)
 $numGrupos = $resultado->num_rows;
@@ -28,7 +28,7 @@ for ($i = 0; $i < $numTareas; $i++) {
     
 }
 ?>
-<div id="cajaTareas">
+<div id="cajaTareas" >
     
 </div>
 
@@ -40,11 +40,12 @@ var listaGrupos = <?php echo json_encode($listaTareas) ?>;
 var numTareas = <?php echo $numTareas ?>;
 function muestra(){
     for(i =0; i< numTareas; i++ ){
-        $("#cajaTarea").append(' <a id="Tarea"href="#" class="list-group-item list-group-item-action bg-dark">'+listaTareas[i][1]+'</a>')
+        $("#cajaTarea").append(' <a id="Tarea"href="#" class="list-group-item" >'+listaTareas[i][1]+'</a>')
     }
     
     
 }
+
     muestra();
     
     

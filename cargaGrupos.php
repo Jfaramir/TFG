@@ -5,7 +5,6 @@ include ('misFunciones.php');
 
 
 $mysqli = conectaBBDD();
-echo 'cargaGrupos';
 
 $email = $_POST['email'];
 $resultado = $mysqli->query("select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)");
@@ -28,10 +27,11 @@ for ($i = 0; $i < $numGrupos; $i++) {
     
 }
 ?>
-<div id="cajaGrupo">
+
+    
+</div><div id="cajaGrupo" >
     
 </div>
-
 
 
 
@@ -40,10 +40,16 @@ var listaGrupos = <?php echo json_encode($listaGrupos) ?>;
 var numGrupos = <?php echo $numGrupos ?>;
 function muestra(){
     for(i =0; i< numGrupos; i++ ){
-        $("#cajaGrupo").append(' <a id="grupo"href="#" class="list-group-item list-group-item-action bg-dark">'+listaGrupos[i][1]+'</a>')
+        $("#cajaGrupo").append(' <a id="" class="list-group-item list-group-item-action bg-dark" onclick="cargaTareas('+listaGrupos[0][1]+')">'+listaGrupos[i][1]+'</a>');
     }
     
     
+}
+function cargaTareas(var id_grupo){
+   var _id = id_grupo;
+ $("#grupos").load("cargaTareas.php", {
+        id:_id
+    });
 }
     muestra();
     
