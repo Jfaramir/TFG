@@ -13,7 +13,7 @@
   <div class="d-flex " id="wrapper">
 
     <!-- Sidebar -->
-    <div class="bg-dark border-right" id="sidebar-wrapper">
+    <div class="bg-dark border-right" id="sidebar-wrapper" style="opacity: 0.75 ">
         <div class="sidebar-heading"><a class=" align-content-lg-start">Grupos</a> <button class="btn-file" onclick="nuevoGrupo()">+</button></div>
       <div id="grupos" class="list-group " style="overflow-y: auto; height:500px; ">
         
@@ -22,7 +22,7 @@
    
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" style="opacity: 0.75">
 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
 
@@ -53,7 +53,7 @@
           </ul>
         </div>
       </nav>
-        <div id="contenedorTareas"class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px;">
+        <div id="contenedorTareas"class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px; width: auto">
                         
 
         <div id="tareas" >
