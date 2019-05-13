@@ -30,8 +30,8 @@ for ($i = 0; $i < $numGrupos; $i++) {
 
     
 </div><div id="cajaGrupo" >
-    
-</div>
+
+</div> 
 
 
 
