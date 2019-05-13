@@ -13,7 +13,6 @@ $resultado = $mysqli->query("select * from grupos inner join  (select id_grupo f
 $numGrupos = $resultado->num_rows;
 
 
-
 $listaGrupos = array();
 
 for ($i = 0; $i < $numGrupos; $i++) {
@@ -40,14 +39,15 @@ var listaGrupos = <?php echo json_encode($listaGrupos) ?>;
 var numGrupos = <?php echo $numGrupos ?>;
 function muestra(){
     for(i =0; i< numGrupos; i++ ){
-        $("#cajaGrupo").append(' <a id="" class="list-group-item list-group-item-action bg-dark" onclick="cargaTareas('+listaGrupos[0][1]+')">'+listaGrupos[i][1]+'</a>');
+        $("#cajaGrupo").append(' <a id="" class="list-group-item list-group-item-action bg-dark" onclick="cargaTareas('+listaGrupos[i][0]+')">'+listaGrupos[i][1]+'</a>');
     }
     
     
 }
-function cargaTareas(var id_grupo){
+function cargaTareas(id_grupo){
    var _id = id_grupo;
- $("#grupos").load("cargaTareas.php", {
+   console.log("id_grupo"+id_grupo);
+ $("#tareas").load("cargaTareas.php", {
         id:_id
     });
 }

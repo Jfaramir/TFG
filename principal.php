@@ -54,7 +54,7 @@
         </div>
       </nav>
 
-      <div class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px;" >
+        <div id="tareas"class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px;" >
           <p>CargaTareas</p>
       </div>
     </div>
