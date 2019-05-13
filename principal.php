@@ -14,7 +14,7 @@
 
     <!-- Sidebar -->
     <div class="bg-dark border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Inicio</div>
+        <div class="sidebar-heading"><a class=" align-content-lg-start">Grupos</a> <button class="btn-file" onclick="nuevoGrupo()">+</button></div>
       <div id="grupos" class="list-group " style="overflow-y: auto; height:500px; ">
         
       </div>
@@ -53,10 +53,12 @@
           </ul>
         </div>
       </nav>
+        <div id="contenedorTareas"class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px;">
+                        
 
-        <div id="tareas"class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px;" >
-          <p>CargaTareas</p>
+        <div id="tareas" >
       </div>
+        </div>
     </div>
     <!-- /#page-content-wrapper -->
 
@@ -73,7 +75,9 @@
     $("#grupos").load('cargaGrupos.php',{
         email: _email
     });
-    
+    function nuevoGrupo(){
+        $('#tareas').load('nuevoGrupo.php');
+    }
     
     
     

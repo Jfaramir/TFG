@@ -5,6 +5,7 @@
          var _email = googleUser.getBasicProfile().getEmail();
          var _id = googleUser.getBasicProfile().getId();
 
+
         $('#contenedor').load("nuevoUsuario.php", {
             nombre: _nombre,
             email: _email,
