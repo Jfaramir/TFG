@@ -44,7 +44,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <input class="form-control" type="text" placeholder="Search" aria-label="Search" style="margin-left: 5%">
+                        <input id="cajabusqueda" class="form-control"  placeholder="Search" aria-label="Search" onkeyup="cargaUsuarios()" style="margin-left: 5%">
 
                     </div>
                     <div class="modal-body" id="usuarios">
@@ -81,7 +81,8 @@
      
     
     function  cargaUsuarios(){
-          var _param = '';
+          var _param = $('#cajabusqueda').val();
+          console.log(_param);
           $('#usuarios').load('buscaUsuarios.php',{
           param: _param
           
