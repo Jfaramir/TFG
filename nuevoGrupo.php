@@ -1,26 +1,5 @@
 <?php
-include ('misFunciones.php');
 
-
-
-$mysqli = conectaBBDD();
-
-$consultaUsuarios = $mysqli->query("select * from users ");
-$numUsuarios = $consultaUsuarios->num_rows;
-
-
-$listaUsuarios = array();
-
-for ($i = 0; $i < $consultaUsuarios; $i++) {
-    
-    $r = $consultaUsuarios->fetch_array(); //leo una fila del resultado de la query
-    $listaGrupos[$i][0] = $r['id'];
-    $listaGrupos[$i][1] = $r['nombre'];
-    $listaGrupos[$i][2] = $r['imagen'];
-    $listaGrupos[$i][3] = $r['id_admin'];
-
-    
-}
 ?>
 <style>
 
@@ -30,7 +9,7 @@ for ($i = 0; $i < $consultaUsuarios; $i++) {
 
         position:relative;// so that .modal & .modal-backdrop gets positioned relative to it
     }
- 
+
 
     .modal, .modal-backdrop {
         position: absolute !important;
@@ -58,17 +37,18 @@ for ($i = 0; $i < $consultaUsuarios; $i++) {
 
 
         <!-- Modal -->
-        <div id="myModal" class="modal fade" role="dialog">
+        <div id="myModal" class="modal fade bg-dark" role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search" style="margin-left: 5%">
+
                     </div>
-                    <div class="modal-body">
-                        <p>Some text in the modal.</p>
+                    <div class="modal-body" id="usuarios">
+                        
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -85,24 +65,32 @@ for ($i = 0; $i < $consultaUsuarios; $i++) {
 
 
     <script>
+
+        function abreModal() {
+
+            $("#myModal").modal("show");
+
+            //appending modal background inside the blue div
+            $('.modal-backdrop').appendTo('.blue');
+
+            //remove the padding right and modal-open class from the body tag which bootstrap adds when a modal is shown
+            $('body').removeClass("modal-open");
+            $('body').css("padding-right", "");
+           cargaUsuarios();
+        }
+     
+    
+    function  cargaUsuarios(){
+          var _param = '';
+          $('#usuarios').load('buscaUsuarios.php',{
+          param: _param
+          
         
-           function abreModal() {
+          });    
+        }
+       
 
-                $("#myModal").modal("show");
 
-                //appending modal background inside the blue div
-                $('.modal-backdrop').appendTo('.blue');
-
-                //remove the padding right and modal-open class from the body tag which bootstrap adds when a modal is shown
-                $('body').removeClass("modal-open");
-                $('body').css("padding-right", "");
-            }
-            function cargaUsuarios(){
-           var listaUsuarios= <?php echo json_encode($listaUsuarios) ?>;
-            var numUsuarios = <?php echo $numUsuarios ?>;    
-            }
-
-        
 
 
     </script>   
