@@ -1,4 +1,8 @@
-<?php ?>
+<?php
+include ('misFunciones.php');
+
+?>
+
 <style>
 
 
@@ -99,8 +103,7 @@
                     }
                     if (anadido) {
                         console.log('ese usuario ya esta añadido');
-                    }
-                    else {
+                    } else {
                         $('#usuariosNuevos').append('<div>' + nombre + '</div>');
                         listaAñadidos[listaAñadidos.length] = id;
 
