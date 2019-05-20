@@ -1,7 +1,3 @@
-<?php
-include ('misFunciones.php');
-
-?>
 
 <style>
 
@@ -117,10 +113,10 @@ include ('misFunciones.php');
 
 
                     } else {
-                        //    $('#contenedorTareas').load('insertaGrupo.php',{
-                        //       lista:listaAñadidos,
-                        //       nombreGrupo:_nombreGrupo
-                        //    });
+                            $('#contenedorTareas').load('insertaGrupo.php',{
+                               lista:listaAñadidos,
+                               nombreGrupo:_nombreGrupo
+                            });
 
                     }
                 }

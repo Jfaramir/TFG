@@ -28,10 +28,12 @@ for ($i = 0; $i < $numTareas; $i++) {
     
 }
 ?>
+<div>
+     <a class=" align-content-lg-start">Tarea</a> <button class="btn-dark" onclick="nuevaTarea()"> +</button>
 <div id="cajaTareas" >
     
 </div>
-
+</div>
 
 
 

@@ -6,12 +6,14 @@ include ('misFunciones.php');
 $mysqli = conectaBBDD();
 
 $email = $_POST['email'];
+
 $resultado = $mysqli->query("select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)");
 
 //select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)
 $numGrupos = $resultado->num_rows;
 
 $listaGrupos = array();
+
 
 for ($i = 0; $i < $numGrupos; $i++) {
 
@@ -26,11 +28,12 @@ for ($i = 0; $i < $numGrupos; $i++) {
 
 ?>
 
-
-</div><div id="cajaGrupo" >
+<div>
+    <input id ="Buscador" name="buscar" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"  >                                                      
+<div id="cajaGrupo" >
 
 </div> 
-
+</div>
 
 
 <script>

@@ -13,7 +13,7 @@ $nombre;
             <!-- Sidebar -->
             <div class="bg-dark border-right" id="sidebar-wrapper" style="opacity: 0.75 " style="align-items: center">
                 <div class="sidebar-heading"><a class=" align-content-lg-start">Grupo</a> <button class="btn-dark" onclick="nuevoGrupo()">+</button> 
-                    <a class=" align-content-lg-start">Tarea</a> <button class="btn-dark" onclick="nuevaTarea()"> +</button></div>
+                   </div>
                 <div id="grupos" class="list-group " style="overflow-y: auto; height:500px; ">
 
                 </div>
@@ -25,9 +25,7 @@ $nombre;
 
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
 
-                    <nav class="navbar navbar-light bg-dark">
-                        <input id ="Buscador" name="buscar" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"  >                                                      
-                    </nav>
+                   
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -60,11 +58,13 @@ $nombre;
                         </ul>
                     </div>
                 </nav>
-                <div id="contenedorTareas" style="width: auto" class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px; width: auto">
+                <div id="contenedorTareas"  class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px; width: 98%">
 
 
                     <div id="tareas" >
                     </div>
+                
+                
                 </div>
             </div>
             <!-- /#page-content-wrapper -->
