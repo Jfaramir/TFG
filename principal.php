@@ -11,7 +11,7 @@ $nombre;
         <div class="d-flex " id="wrapper">
 
             <!-- Sidebar -->
-            <div class="bg-dark border-right" id="sidebar-wrapper" style="opacity: 0.75 ">
+            <div class="bg-dark border-right" id="sidebar-wrapper" style="opacity: 0.75 " style="align-items: center">
                 <div class="sidebar-heading"><a class=" align-content-lg-start">Grupo</a> <button class="btn-dark" onclick="nuevoGrupo()">+</button> 
                     <a class=" align-content-lg-start">Tarea</a> <button class="btn-dark" onclick="nuevaTarea()"> +</button></div>
                 <div id="grupos" class="list-group " style="overflow-y: auto; height:500px; ">
@@ -26,14 +26,14 @@ $nombre;
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
 
                     <nav class="navbar navbar-light bg-dark">
-                        <input id ="Buscador" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"  >                                                      
+                        <input id ="Buscador" name="buscar" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"  >                                                      
                     </nav>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0" style="align-items: center">
                             <li class="nav-item active">
                                 <a class="nav-link" href="http://localhost/tfg/index.php#" >
                                     <button id="buscar" class="btn-dark my-2 my-sm-0" type="submit">Buscar</button></a>
