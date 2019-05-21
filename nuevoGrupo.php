@@ -27,12 +27,13 @@
         </div>
 
         <br><br>
-        <button id="botonModal" onclick="abreModal()">Agregar usuario</button>
-        <br><br>
+        <button id="botonModal" class="btn"onclick="abreModal()">Agregar usuario</button>
+        <br><br><br><br>
         <div id="usuariosNuevos"></div>
-        <button class="btn btn-success" onclick="creaGrupo()">Crear Grupo</button>
+        <br><br><br><br>
+        <button class="btn " onclick="creaGrupo()">Crear Grupo</button>
 
-
+        <br><br>
         <span id="alertas" class="label "></span>
 
 
@@ -62,7 +63,7 @@
 
 
             <script>
-                var listaAñadidos = [];
+                var listaAnnadidos = [];
 
                 function abreModal() {
 
@@ -89,10 +90,10 @@
                 }
                 function añadeUsuario(id, nombre) {
 
-                    console.log(id, nombre, listaAñadidos);
+                    console.log(id, nombre, listaAnnadidos);
                     var anadido = false;
-                    for (i = 0; i < listaAñadidos.length; i++) {
-                        if (listaAñadidos[i] == id) {
+                    for (i = 0; i < listaAnnadidos.length; i++) {
+                        if (listaAnnadidos[i] == id) {
                             anadido = true;
 
                         }
@@ -100,21 +101,24 @@
                     if (anadido) {
                         console.log('ese usuario ya esta añadido');
                     } else {
-                        $('#usuariosNuevos').append('<div>' + nombre + '</div>');
-                        listaAñadidos[listaAñadidos.length] = id;
+                        $('#us'+id).hide();
+                        $('#usuariosNuevos').append('<div  style="background-color: white; float: left; margin-left:10px;" ><b>' + nombre + '<b></div>');
+                        listaAnnadidos[listaAnnadidos.length] = id;
 
                     }
                 }
 
                 function creaGrupo() {
+                   
                     var _nombreGrupo = $('#cajaNomobreGrupo').val();
                     if (_nombreGrupo == "") {
                         $('#alertas').addClass('label-danger').text('Inserte un nombre de grupo');
 
 
                     } else {
-                            $('#contenedorTareas').load('insertaGrupo.php',{
-                               lista:listaAñadidos,
+                         console.log('crea grupo');
+                            $('#tareas').load('insertaGrupo.php',{
+                               lista:listaAnnadidos,
                                nombreGrupo:_nombreGrupo
                             });
 
