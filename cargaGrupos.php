@@ -5,6 +5,7 @@ include ('misFunciones.php');
 
 $mysqli = conectaBBDD();
 
+
 $email = $_POST['email'];
 
 $resultado = $mysqli->query("select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)");
@@ -52,9 +53,9 @@ for ($i = 0; $i < $numGrupos; $i++) {
         console.log("id_grupo" + id_grupo);
         $("#tareas").load("cargaTareas.php", {
             id: _id
-        });
+        });    }
 
-    }
+
   
     muestra();
 

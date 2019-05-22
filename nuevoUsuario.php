@@ -1,8 +1,10 @@
 <?php
 include ('misFunciones.php');
+session_start();
 
 $nombre = $_POST['nombre'];
 $email = $_POST['email'];
+$_SESSION['email']=$email;
 
 $mysqli = conectaBBDD();
 $consulta = $mysqli -> query("select email from users where email = '$email'");
