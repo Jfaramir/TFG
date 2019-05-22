@@ -5,7 +5,7 @@
     .blue
     {
 
-        position:relative;// so that .modal & .modal-backdrop gets positioned relative to it
+        position:relative; 
     }
 
 
@@ -111,6 +111,8 @@
                 function creaGrupo() {
                    
                     var _nombreGrupo = $('#cajaNomobreGrupo').val();
+                    
+                    
                     if (_nombreGrupo == "") {
                         $('#alertas').addClass('label-danger').text('Inserte un nombre de grupo');
 
@@ -118,7 +120,7 @@
                     } else {
                          console.log('crea grupo');
                             $('#tareas').load('insertaGrupo.php',{
-                               lista:listaAnnadidos,
+                               lista: listaAnnadidos.length,
                                nombreGrupo:_nombreGrupo
                             });
 

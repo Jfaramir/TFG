@@ -14,7 +14,7 @@ $resultado = $mysqli->query("INSERT INTO tareas (id, $texto_tarea, $nombre_, id_
     .blue
     {
 
-        position:relative;// so that .modal & .modal-backdrop gets positioned relative to it
+        position:relative;
     }
 
 
