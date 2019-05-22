@@ -7,9 +7,16 @@ $mysqli = conectaBBDD();
 
 
 $email = $_POST['email'];
+$param = $_POST['param'];
+
+if ($param == '') {
 
 $resultado = $mysqli->query("select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)");
 
+} else {
+    $resultado = $mysqli->query("select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo) where nombre like '%$param%'");
+
+}
 //select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)
 $numGrupos = $resultado->num_rows;
 
@@ -30,7 +37,6 @@ for ($i = 0; $i < $numGrupos; $i++) {
 ?>
 
 <div>
-    <input id ="Buscador" name="buscar" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"  >                                                      
 <div id="cajaGrupo" >
 
 </div> 
@@ -55,7 +61,7 @@ for ($i = 0; $i < $numGrupos; $i++) {
             id: _id
         });    }
 
-
+  
   
     muestra();
 

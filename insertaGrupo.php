@@ -22,7 +22,8 @@ for ($i = 0; $i < $listaAnnadidos; $i++) {
         var _email = '<?php echo $email; ?>';
         //side var acction
         $("#grupos").load('cargaGrupos.php', {
-            email: _email
+            email: _email,
+            param: ''
         });
     </script>
     

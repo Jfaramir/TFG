@@ -13,7 +13,10 @@ $nombre;
             <div class="bg-dark border-right" id="sidebar-wrapper" style="opacity: 0.75 " style="align-items: center">
                 <div class="sidebar-heading"><a class=" align-content-lg-start">Grupo</a> <button class="btn-dark" onclick="nuevoGrupo()">+</button> 
                 </div>
+                <input id ="Buscador" name="buscar" onkeyup="cargaGrupos()" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"  >                                                      
+
                 <div id="grupos" class="list-group " style="overflow-y: auto; height:500px; padding: 5px;">
+
                 </div>
             </div>
 
@@ -57,13 +60,26 @@ $nombre;
     <script>
         var _email = '<?php echo $email; ?>';
         //side var acction
-        $("#grupos").load('cargaGrupos.php', {
-            email: _email
+    
+    $("#grupos").load('cargaGrupos.php', {
+            email: _email,
+            param:''
         });
-        function nuevoGrupo() {
+        
+    
+    function nuevoGrupo() {
             $('#tareas').load('nuevoGrupo.php');
         }
+    function cargaGrupos(){ 
+     var _param = $('#Buscador').val();
 
+    $("#grupos").load('cargaGrupos.php', {
+            email: _email,
+            param: _param
+        });
+        
+    }
+    cargaGrupos();
 
 
     </script>
