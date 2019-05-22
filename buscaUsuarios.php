@@ -37,7 +37,7 @@ for ($i = 0; $i < $numUsuarios; $i++) {
         var listaUsuarios = <?php echo json_encode($listaUsuarios) ?>;
         var numUsuarios = <?php echo $numUsuarios ?>;
         for (i = 0; i < numUsuarios; i++) {
-            $("#usuariosbusca").append(' <a id="us'+listaUsuarios[i][0]+'" class="list-group-item list-group-item-action bg-dark " ondblclick="añadeUsuario('+ listaUsuarios[i][0] +','+"'"+listaUsuarios[i][3] +"'"+')">' + listaUsuarios[i][3] + '</a>');
+            $("#usuariosbusca").append(' <a id="us'+listaUsuarios[i][0]+'" class="list-group-item list-group-item-action bg-dark " onclick="añadeUsuario('+ listaUsuarios[i][0] +','+"'"+listaUsuarios[i][3] +"'"+')">' + listaUsuarios[i][3] + '</a>');
    
     }
         //funcion para agrgar los que ya estan añadidos.
