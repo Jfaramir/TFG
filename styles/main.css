@@ -138,6 +138,31 @@ body {
 /*
  * Subscribe modal box
  */
+
+#loginModal .modal-content {
+  background-color: #303546;
+  color: #fff;
+  text-align: left;
+}
+
+#loginModal .modal-header, #subscribeModal .modal-footer {
+  border: 0;
+}
+
+#loginModal .close {
+  color: #fff;
+}
+
+#loginModal .form-control {
+  margin-top: 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+
+#loginModal .form-control:focus {
+  border-color: #49506a;
+}
+
 #subscribeModal .modal-content {
   background-color: #303546;
   color: #fff;
