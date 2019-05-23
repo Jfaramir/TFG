@@ -120,7 +120,7 @@
                     } else {
                          console.log('crea grupo');
                             $('#tareas').load('insertaGrupo.php',{
-                               lista: listaAnnadidos.length,
+                               lista: listaAnnadidos,
                                nombreGrupo:_nombreGrupo
                             });
 
