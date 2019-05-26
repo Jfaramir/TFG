@@ -3,25 +3,38 @@ $idTarea = $_POST['idTarea'];
 include ('misFunciones.php');
 $mysqli = conectaBBDD();
 $id = $_POST['id'];
-$resultado = $mysqli->query("SELECT * FROM nota where id_grupo = $id ");
-//select * from grupos inner join  (select id_grupo from grupo_usuario where id_usuario = (select id from users where email = '$email') ) aux on (grupos.id = aux.id_grupo)
-$numTareas = $resultado->num_rows;
+$resultado = $mysqli->query("select * from notas inner join notas_grupo on(notas.id = notas_grupo.id) where notas_grupo.id_tarea = $id;");
+
+$numNotas = $resultado->num_rows;
 
 
-$listaTareas = array();
+$listaNotas = array();
 
+for ($i = 0; $i < $listaNotas; $i++) {
+    
+    $r = $resultado->fetch_array(); //leo una fila del resultado de la query
+    $listaNotas[$i][0] = $r['id'];
+    $listaNotas[$i][1] = $r['texto_tarea'];
+    $listaNotas[$i][2] = $r['nombre'];
+    $listaNotas[$i][3] = $r['id_grupo'];
+
+    
+}
+?>
 ?>
 <html>
     
     <div id="notas">
-        
+        <div>
+            
+        </div>
         
     </div>
     
     
     
     <script>
-        
+        ('#notas').apeand()
         
         
     </script>

@@ -60,7 +60,7 @@ function muestra() {
         console.log("id_grupo" + id_grupo);
         $("#tareas").load("cargaTareas.php", {
             id: _id,
-            nombre: nombre
+            nombre: _nombre
         });    
     }
   
