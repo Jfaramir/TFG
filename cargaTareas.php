@@ -29,8 +29,8 @@ for ($i = 0; $i < $numTareas; $i++) {
 ?>
 <div>
     <div id="cajaTituloGrupo"class="border border-white rounded d-flex flex-row" style="padding: 1%; border: 2px; margin-top: 1%"> 
-        <div class="p-2" id="nombreGrupo">
-            <?php echo $nombre ?>
+        <div class="p-2" 
+             <label id="nombreGrupo"> <?php echo $nombre ?> </label>
         </div>
         <div class="ml-auto p-2">
             <button  class="btn btn-dark border border-white rounded" onclick="cargaConfiguracion()">Configuracion</button>
@@ -38,18 +38,19 @@ for ($i = 0; $i < $numTareas; $i++) {
     </div>
     <div class="" style="margin-top: 2%">
     </div>
-    <div id="cajaTareas" class="  " >
-          <div  class=" border border-bottom border-white rounded " >
+    <div  class=" border border-bottom border-white rounded " >
         <a class=" align-content-lg-start ">Tarea</a> <button class="btn btn-dark border border-white rounded  bg-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
             añadir
         </button>
-          </div>
+    </div>
+    <div id="cajaTareas" class=" list-group" >
+
         <div class="collapse" id="collapseExample">
             <div class="card card-body bg-dark ">
-                   <div class="col">
-                       <input  class="form-control" id="nombreTarea" style="height: 3px; width: 100px;float: left"  placeholder="Nueva Tarea">
-                       <button class="btn btn-dark border border-white rounded" onclick="nuevaTarea()" >añadir </button>
-                   </div>
+                <div class="col">
+                    <input  class="form-control" id="nombreTarea"type="text" style="height: 3px; width: 100px;float: left"  placeholder="Nueva Tarea">
+                    <button class="btn btn-dark border border-white rounded" onclick="nuevaTarea()" >añadir </button>
+                </div>
             </div>
         </div>
     </div>
@@ -81,14 +82,15 @@ for ($i = 0; $i < $numTareas; $i++) {
         }
         function nuevaTarea() {
             var _titulo = $('#nombreTarea').val();
-          var nombreGrupo  = $('#nombreGrupo').val();
+            var nombreGrupo = $('#nombreGrupo').text();
             $('#collapseExample').collapse('hide');
-            $('#tareas').load('nuevaTarea.php',{
-                 titulo:_titulo,
-                 id: _id,
-                 nombre: nombreGrupo
-                 
-             });
+
+            $('#tareas').load('nuevaTarea.php', {
+                titulo: _titulo,
+                id: _id,
+                nombre: nombreGrupo
+
+            });
         }
 
         muestra();

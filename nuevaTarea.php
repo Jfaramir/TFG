@@ -3,24 +3,29 @@ include 'misFunciones.php';
 
 $mysqli = conectaBBDD();
 $nombre_ = $_POST['titulo'];
+$nombreGupo = $_POST['nombre'];
 $id = $_POST['id'];
+echo $id;
+echo $nombre_;
+echo $nombreGupo;
 
-$resultado = $mysqli->query("INSERT INTO tareas(id,texto_tarea,nombre,id_grupo) VALUES(0, $nombre_ , '', $id)");
+$resultado = $mysqli->query("INSERT INTO tareas(id,texto_tarea,nombre,id_grupo) VALUES(0, '$nombre_' , '', '$id')");
 
 
 ?>
 <html>
     
     <script>
+         var _id = '<?php echo $id?>';
+        var _nombre = '<?php $nombreGupo ?>';
     function cargaTareas() {
-        var _id = <?php echo $id?>;
-        var _nombre = <?php $nombre ?>;
-        console.log("id_grupo" + _id);
+       
         $("#tareas").load("cargaTareas.php", {
             id: _id,
             nombre: _nombre
-        });    
+        });  
     }
+   cargaTareas();
     </script>
     
 </html>
