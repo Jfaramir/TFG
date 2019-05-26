@@ -34,6 +34,7 @@ CREATE TABLE `grupos` (
   primary key (`id`)
 );
 
+
 CREATE TABLE `tareas` (
   `id` int(11) auto_increment,
   `texto_tarea` varchar(250) ,
@@ -42,6 +43,7 @@ CREATE TABLE `tareas` (
   primary key (`id`),
   fOREIGN KEY (`id_grupo`) REFERENCES `grupos`(`id`)
 ) ;
+
 CREATE TABLE `archivos` (
   `id` int(11) auto_increment,
   `ruta` varchar(255) ,
@@ -52,12 +54,19 @@ CREATE TABLE `archivos` (
 
 CREATE TABLE `notas` (
   `id` int(11) auto_increment,
+   `titulo` varchar(250) ,
   `texto_nota` varchar(250) ,
-  `id_tarea` int(11),
-  primary key (`id`),
-FOREIGN KEY (`id_tarea`) REFERENCES `tareas`(`id`)
-
+  primary key (`id`)
 ) ;
+
+CREATE TABLE notas_grupo(
+id int(11) auto_increment,
+id_nota int(11),
+id_tarea int(11),
+primary key (`id`),
+foreign key (id_nota) references `notas` (`id`),
+foreign key (id_tarea) references `tareas` (`id`)
+);
 
 
 
@@ -80,7 +89,22 @@ FOREIGN KEY (`id_tarea`) REFERENCES `tareas`(`id`)
 
 ) ;
 
+CREATE TABLE `notificaciones` (
+  `id` int(11) auto_increment,
+  `notificacion` varchar(255) ,
+  `timestamp` timestamp,
+  `status` int(1),
+    primary key (`id`)
 
+) ;
+CREATE TABLE notificaion_usuario(
+id int(11) auto_increment,
+id_usuario int(11),
+id_notificaciones int(11),
+primary key (`id`),
+foreign key (id_usuario) references `users` (`id`),
+foreign key (id_notificaciones) references `notificaciones` (`id`)
+);
 
 
 
@@ -92,6 +116,8 @@ primary key (`id`),
 foreign key (id_usuario) references `users` (`id`),
 foreign key (id_grupo) references `grupos` (`id`)
 );
+
+
 create table asignaciones(
 id int(11) auto_increment,
 id_admin int(11),
@@ -100,7 +126,6 @@ id_usuario int(11),
 primary key (`id`),
 foreign key (id_usuario) references `users` (`id`),
 foreign key (id_admin) references `admins` (`id`),
-
 foreign key (id_tarea) references `users` (`id`)
 
 );

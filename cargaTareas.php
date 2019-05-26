@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 include ('misFunciones.php');
 
@@ -29,8 +29,9 @@ for ($i = 0; $i < $numTareas; $i++) {
 }
 ?>
 <div>
+<div id="cajaTareas" >   
      <a class=" align-content-lg-start">Tarea</a> <button class="btn-dark" onclick="nuevaTarea()"> +</button>
-<div id="cajaTareas" >
+
     
 </div>
 </div>
@@ -42,10 +43,16 @@ var listaTareas= <?php echo json_encode($listaTareas) ?>;
 var numTareas = <?php echo $numTareas ?>;
 function muestra(){
     for(i =0; i< numTareas; i++ ){
-        $("#cajaTareas").append(' <a id="Tarea"href="#" class="list-group-item bg-dark" >'+listaTareas[i][1]+'</a>');
+        $("#cajaTareas").append(' <a id="" href="#" onclick="contenidoTarea('+listaTareas[i][0]+')" class="list-group-item bg-dark" >'+listaTareas[i][1]+'</a>');
     }
-            console.log("cargatare");
 
+    
+}
+
+function contenidoTarea(_idTarea){
+     $("#cajaTareas").load('cargaContenido.php',{
+         idTarea:_idTarea
+     });
     
 }
 

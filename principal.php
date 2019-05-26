@@ -5,7 +5,7 @@ $nombre;
 <html>
     <link href="styles/simple-sidebar.css" rel="stylesheet">
 
-    <div class="container" style=" margin-top: 3%;">
+    <div class="container" style=" margin-top: 3%; ">
         <div class="d-flex " id="wrapper">
             
             
