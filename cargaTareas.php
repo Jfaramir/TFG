@@ -8,6 +8,8 @@ $mysqli = conectaBBDD();
 
 
 $id = $_POST['id'];
+$nombre = $_POST['nombre'];
+
 
 $resultado = $mysqli->query("SELECT * FROM tareas where id_grupo = $id ");
 
@@ -29,18 +31,27 @@ for ($i = 0; $i < $numTareas; $i++) {
 }
 ?>
 <div>
-<div id="cajaTareas" >   
-     <a class=" align-content-lg-start">Tarea</a> <button class="btn-dark" onclick="nuevaTarea()"> +</button>
+    <div id="cajaTituloGrupo"class="border border-white rounded d-flex flex-row" style="padding: 1%; border: 2px; margin-top: 1%"> 
+        <div class="p-2" >
+            <?php echo $nombre ?> 
+        </div>
+        <div class="ml-auto p-2">
+            <button  class="btn btn-dark border border-white rounded" onclick="cargaConfiguracion()">Configuracion</button>
+        </div>
+    </div>
+    <div class="" style="margin-top: 2%">
+    </div>
+    <div id="cajaTareas" class="" >
+    <a class=" align-content-lg-start ">Tarea</a> <button class="btn-dark" onclick="nuevaTarea()"> +</button>
 
-    
+    </div>
 </div>
-</div>
-
-
-
 <script>
 var listaTareas= <?php echo json_encode($listaTareas) ?>;
 var numTareas = <?php echo $numTareas ?>;
+//id_grupo
+var _id = <?php echo $id  ?>;
+
 function muestra(){
     for(i =0; i< numTareas; i++ ){
         $("#cajaTareas").append(' <a id="" href="#" onclick="contenidoTarea('+listaTareas[i][0]+')" class="list-group-item bg-dark" >'+listaTareas[i][1]+'</a>');
@@ -48,9 +59,14 @@ function muestra(){
 
     
 }
+ function cargaConfiguracion(){
+        $('#cajaTareas').load('configuracionGrupos.php',{
+            id: _id
+        })
+    }
 
 function contenidoTarea(_idTarea){
-     $("#cajaTareas").load('cargaContenido.php',{
+     $("#tareas").load('cargaContenido.php',{
          idTarea:_idTarea
      });
     

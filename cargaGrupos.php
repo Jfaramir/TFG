@@ -46,22 +46,23 @@ for ($i = 0; $i < $numGrupos; $i++) {
 <script>
     var listaGrupos = <?php echo json_encode($listaGrupos) ?>;
     var numGrupos = <?php echo $numGrupos ?>;
-    function muestra() {
+function muestra() {
         for (i = 0; i < numGrupos; i++) {
-            $("#cajaGrupo").append(' <a id="grupo' + listaGrupos[i][0] + '" class="list-group-item list-group-item-action bg-dark " style="margin-top: 5px;" onclick="cargaTareas(' + listaGrupos[i][0] + ')">' + listaGrupos[i][1] + '</a>');
+            $("#cajaGrupo").append(' <a id="grupo' + listaGrupos[i][0] + '" class="list-group-item list-group-item-action bg-dark " style="margin-top: 5px;" onclick="cargaTareas('+ listaGrupos[i][0] +','+"'"+listaGrupos[i][1] +"'"+')">' + listaGrupos[i][1] + '</a>');
             
         }
 
 
     }
-    function cargaTareas(id_grupo) {
+    function cargaTareas(id_grupo,nombre) {
         var _id = id_grupo;
+        var _nombre = nombre;
         console.log("id_grupo" + id_grupo);
         $("#tareas").load("cargaTareas.php", {
-            id: _id
-        });    }
-
-  
+            id: _id,
+            nombre: nombre
+        });    
+    }
   
     muestra();
 
