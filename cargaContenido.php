@@ -37,7 +37,7 @@ $idTarea = $_POST['idTarea'];
             });
         }
         
-        cargaNotas();
+        cargaNotas() ;
     </script>   
 </html>
 

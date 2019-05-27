@@ -38,18 +38,19 @@ for ($i = 0; $i < $numTareas; $i++) {
     </div>
     <div class="" style="margin-top: 2%">
     </div>
-    <div  class=" border border-bottom border-white rounded " >
-        <a class=" align-content-lg-start ">Tarea</a> <button class="btn btn-dark border border-white rounded  bg-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-            añadir
+ 
+    <div id="cajaTareas" class=" list-group" >
+           <div  class=" border border-bottom border-white rounded " >
+        <button class="btn btn-outline-success border  bg-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+            nueva tarea
         </button>
     </div>
-    <div id="cajaTareas" class=" list-group" >
 
         <div class="collapse" id="collapseExample">
             <div class="card card-body bg-dark ">
                 <div class="col">
                     <input  class="form-control" id="nombreTarea"type="text" style="height: 3px; width: 100px;float: left"  placeholder="Nueva Tarea">
-                    <button class="btn btn-dark border border-white rounded" onclick="nuevaTarea()" >añadir </button>
+                    <button class="btn btn-outline-success" onclick="nuevaTarea()" >añadir </button>
                 </div>
             </div>
         </div>
@@ -62,8 +63,10 @@ for ($i = 0; $i < $numTareas; $i++) {
 
 
         function muestra() {
+            //  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> <a class="dropdown-item" href="#">Dropdown link</a> <a class="dropdown-item" href="#">Dropdown link</a> </div>
             for (i = 0; i < numTareas; i++) {
-                $("#cajaTareas").append(' <a id="" href="#" onclick="contenidoTarea(' + listaTareas[i][0] + ')" class="list-group-item bg-dark" >' + listaTareas[i][1] + '</a>');
+                $("#cajaTareas").append(' <a id=""  onclick="contenidoTarea(' + listaTareas[i][0] + ')" class="list-group-item bg-dark" >' + listaTareas[i][1] + ' <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">\n\
+    \n\'<a class="dropdown-item" href="#">Dropdown link</a><a class="dropdown-item" href="#">Dropdown link</a></div>  </a>');
             }
 
 
@@ -84,7 +87,9 @@ for ($i = 0; $i < $numTareas; $i++) {
             var _titulo = $('#nombreTarea').val();
             var nombreGrupo = $('#nombreGrupo').text();
             $('#collapseExample').collapse('hide');
+                    console.log("nombreGrupo"+nombreGrupo);
 
+            
             $('#tareas').load('nuevaTarea.php', {
                 titulo: _titulo,
                 id: _id,
