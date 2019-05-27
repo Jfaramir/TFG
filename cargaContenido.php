@@ -1,6 +1,10 @@
 <?php
+
 $idTarea = $_POST['idTarea'];
+
+
 ?>
+
 <html>
 
     <!--aqui se van a cargar las notas -->
