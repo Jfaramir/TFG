@@ -41,16 +41,16 @@ for ($i = 0; $i < $numTareas; $i++) {
  
     <div id="cajaTareas" class=" list-group" >
            <div  class=" border border-bottom border-white rounded " >
-        <button class="btn btn-outline-success border  bg-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        <button class="btn btn-outline-success border  bg-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="height: 35px; width: 150px; ">
             nueva tarea
         </button>
     </div>
 
         <div class="collapse" id="collapseExample">
-            <div class="card card-body bg-dark ">
-                <div class="col">
-                    <input  class="form-control" id="nombreTarea"type="text" style="height: 3px; width: 100px;float: left"  placeholder="Nueva Tarea">
-                    <button class="btn btn-outline-success" onclick="nuevaTarea()" >añadir </button>
+            <div class="card card-body bg-dark " style="height: 70px; width: 100%; ">
+                <div class="col" >
+                    <input  class="form-control" id="nombreTarea"type="text" style="height:40px; width: 150px; float: left "  placeholder="Nueva Tarea">
+                    <button class="btn btn-outline-success" onclick="nuevaTarea()" style="height:40px;"  >añadir </button>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@ for ($i = 0; $i < $numTareas; $i++) {
         function muestra() {
             //  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> <a class="dropdown-item" href="#">Dropdown link</a> <a class="dropdown-item" href="#">Dropdown link</a> </div>
             for (i = 0; i < numTareas; i++) {
-                $("#cajaTareas").append(' <a id=""  onclick="contenidoTarea(' + listaTareas[i][0] + ')" class="list-group-item bg-dark" >' + listaTareas[i][1] + ' <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">\n\
+                $("#cajaTareas").append(' <a id=""  onclick="contenidoTarea(' + listaTareas[i][0] + ')" class="list-group-item bg-dark" >' + listaTareas[i][1] + ' <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" >\n\
     \n\'<a class="dropdown-item" href="#">Dropdown link</a><a class="dropdown-item" href="#">Dropdown link</a></div>  </a>');
             }
 

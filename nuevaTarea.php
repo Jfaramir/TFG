@@ -17,12 +17,13 @@ $resultado = $mysqli->query("INSERT INTO tareas(id,texto_tarea,nombre,id_grupo) 
     
     <script>
          var _id = '<?php echo $id?>';
-        var _nombre = '<?php $nombreGupo ?>';
+        var _nombre = '<?php echo $nombre ?>';
     function cargaTareas() {
        
         $("#tareas").load("cargaTareas.php", {
             id: _id,
             nombre: _nombre
+            
         });  
     }
    cargaTareas();
