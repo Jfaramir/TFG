@@ -4,10 +4,7 @@ $idTarea = $_POST['idTarea'];
 
 <html>
 
-    <!--aqui se van a cargar las notas -->
-    <div id="cajaNotas" style="float: left">  
-
-    </div>
+  
     <!--aqui se van a cargar el calendario -->
     <div id="cajaCalendario"> 
         
@@ -50,11 +47,9 @@ $idTarea = $_POST['idTarea'];
    
     
     function cargaCalendario() {
-            ('#cajaCalendario').load('calendario.php', {
-                idTarea: _idTarea
-            });
+            $('#cajaCalendario').load('calendario.php');
         }
-
+cargaCalendario();
      
     </script>   
 </html>

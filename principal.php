@@ -4,8 +4,8 @@ $nombre;
 ?>
 <html>
     <link href="styles/simple-sidebar.css" rel="stylesheet">
-
-    <div class="container " style=" margin-top: 3%; ">
+    <div style="padding: 7%">
+    <div style=" margin-top: 3%; ">
         <div class="d-flex " id="wrapper">
             
             
@@ -47,12 +47,12 @@ $nombre;
                         </ul>
                     </div>
                 </nav>
-                <div id="tareas"  class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 500px; border: 2px; margin-top: 10px; margin-left: 10px; width: 98%">
+                <div id="tareas"  class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 750px; border: 2px; margin-top: 10px; margin-left: 10px; width: 98%">
                 </div>
             </div>
         </div>
     </div>
-
+   </div>
 
 
 
