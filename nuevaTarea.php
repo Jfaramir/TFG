@@ -15,6 +15,10 @@ $resultado = $mysqli->query("INSERT INTO tareas(id,texto_tarea,nombre,id_grupo) 
 ?>
 <html>
     
+    <div>
+        
+    </div>
+    
     <script>
          var _id = '<?php echo $id?>';
         var _nombre = '<?php echo $nombre ?>';

@@ -55,6 +55,7 @@ html .fc,
 .fc-header-title {
 	display: inline-block;
 	vertical-align: top;
+        color: black;
 	margin-top: -5px;
 }
 	
@@ -62,7 +63,8 @@ html .fc,
 	margin-top: 0;
 	white-space: nowrap;
 	font-size: 32px;
-    font-weight: 100;
+        font-weight: 100;
+        color: black;
     margin-bottom: 10px;
 }
 	
@@ -424,6 +426,8 @@ table.fc-border-separate {
 
 .fc-grid th {
 	text-align: center;
+        
+        color: black;
 	}
 
 .fc .fc-week-number {

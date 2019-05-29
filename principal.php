@@ -2,11 +2,11 @@
 $nombre;
 
 ?>
-<html>
-    <link href="styles/simple-sidebar.css" rel="stylesheet">
-    <div style="padding: 7%">
-    <div style=" margin-top: 3%; ">
-        <div class="d-flex " id="wrapper">
+<html >
+    <link href="styles/simple-sidebar.css" rel="stylesheet" style="background-color: white">
+    <div >
+    <div >
+        <div class="d-flex " id="wrapper" style=" width: 90%; margin-top:5%; margin-right:5%; margin-left:5%; height: 75%;" >
             
             
             <!-- Sidebar -->
@@ -15,14 +15,14 @@ $nombre;
                 </div>
                 <input id ="Buscador" name="buscar" onkeyup="cargaGrupos()" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search"  >                                                      
 
-                <div id="grupos" class="list-group " style="overflow-y: auto; height:500px; padding: 5px;">
+                <div id="grupos" class="list-group " style="overflow-y: auto; height:600px; padding: 5px;">
 
                 </div>
             </div>
 
 
             <!-- Page Content -->
-            <div id="page-content-wrapper" style="opacity: 0.75">
+            <div id="page-content-wrapper" style="opacity: 0.75; ">
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -30,24 +30,19 @@ $nombre;
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0" style="align-items: center">
                             <li class="nav-item active">
-                                <a class="nav-link" href="http://localhost/tfg/index.php#" >Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="http://localhost/tfg/index.php#" ><span class="sr-only"></span></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Acciones
+                                    
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Notas</a>
-                                    <a class="dropdown-item" href="#">Recordatorios</a>
-                                    <a class="dropdown-item" href="#">Subtareas</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Todos los archivos</a>
                                 </div>
                             </li>
                         </ul>
                     </div>
                 </nav>
-                <div id="tareas"  class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 750px; border: 2px; margin-top: 10px; margin-left: 10px; width: 98%">
+                <div id="tareas"  class="container-fluid bg-dark border-bottom" style="overflow-y: auto; height: 670px; border: 2px; margin-top: 10px; margin-left: 10px; width: 98%">
                 </div>
             </div>
         </div>

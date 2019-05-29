@@ -227,6 +227,7 @@
 /* 		float: right; */
         margin: 0 auto;
 		width: 900px;
+                height: 0%;
 		background-color: #FFFFFF;
 		  border-radius: 6px;
         box-shadow: 0 1px 2px #C3C3C3;

@@ -1,26 +1,63 @@
 <?php
-
-include 'misFunciones.php';
-
-$mysqli = conectaBBDD();
-$id = $POST_['id_tarea'];
-$resultado = $mysqli->query("SELECT * FROM notas where id_tarea = $id ");
-
-$numNotas = $resultado->num_rows;
-
-
-$listaNotas = array();
-
-for ($i = 0; $i < $numNotas; $i++) {
-
-    $r = $resultado->fetch_array(); //leo una fila del resultado de la query
-    $listaNotas[$i][0] = $r['id'];
-    $listaNotas[$i][1] = $r['texto_notas'];
-    $listaNotas[$i][2] = $r['id_tarea'];
-}
+$idTarea = $_POST['idTarea'];
 ?>
 
-<div id= "cajaNotas" style="width:100% ">
-</div>
+<html>
+
+    <!--aqui se van a cargar las notas -->
+    <div id="cajaNotas" style="float: left">  
+
+    </div>
+    <!--aqui se van a cargar el calendario -->
+    <div id="cajaCalendario"> 
+        
+    </div>
+
+    <div id="cajaCosa">
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <script>
+
+        var _idTarea = <?php $idTarea ?>
+//funcion   que carga las notas el la caja html
+        function cargaNotas() {
+            ('#cajaNotas').load('notas.php', {
+                idTarea: _idTarea
+            });
+        }
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+    
+    function cargaCalendario() {
+            ('#cajaCalendario').load('calendario.php', {
+                idTarea: _idTarea
+            });
+        }
+
+     
+    </script>   
+</html>
+
 
 
