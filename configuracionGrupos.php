@@ -17,8 +17,9 @@ for ($i = 0; $i < $numGrupos; $i++) {
 }
 
 $resultado2 = $mysqli->query("SELECT first_name,email FROM users INNER JOIN grupo_usuario ON (users.id = grupo_usuario.id_usuario) WHERE grupo_usuario.id_grupo = $id");
-$usuarios = $resultado->num_rows;
+$usuarios = $resultado2->num_rows;
 $listaUsuarios = array();
+
 for ($i = 0; $i < $usuarios; $i++) {
 
     $r = $resultado2->fetch_array(); //leo una fila del resultado de la query
@@ -59,7 +60,7 @@ for ($i = 0; $i < $usuarios; $i++) {
         
         function cargaParticipantes(){
            
-            for (i = 0; i<numUsuarios;i++ ){
+            for (i = 0; i<numUsuarios; i++ ){
             $('#cajaParticipantes').append(' <button type="button" class="btn  btn-outline-info  btn-lg  " style="margin: 3%"> '+listaaIntegrantes[i][0]+'</button>');
             }
         }
