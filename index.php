@@ -17,7 +17,7 @@
     <div class="cover-container">
       <div class="masthead clearfix">
         <div class="inner">
-          <h3 class="masthead-brand">Recordator</h3>
+          <h3 class="masthead-brand" style="color: white" >Recordator</h3>
           <nav class="nav nav-masthead">
             <a class="nav-link nav-social" href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             <a class="nav-link nav-social" href="https://twitter.com/?lang=es"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -30,8 +30,8 @@
       </div>
         <br>   
         <div class="inner cover">
-        <h1 class="cover-heading">Recordator</h1>
-        <p class="lead cover-copy">La aplicaccion que te ayudara a organizar tu vida.</p>
+        <h1 class="cover-heading" style="color: white" >Recordator</h1>
+        <p class="lead cover-copy" style="color: white" >La aplicaccion que te ayudara a organizar tu vida.</p>
         <p class="lead">
             <button type="button" class="btn btn-lg btn-default btn-notify" data-toggle="modal" data-target="#subscribeModal">Iniciar Sesion</button>
             <button  type="button" class="g-signin2 btn btn-lg btn-default btn-notify" data-onsuccess="onSingin" data-toggle="modal" >Iniciar con google</button></p>
