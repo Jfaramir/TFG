@@ -63,8 +63,11 @@ function muestra() {
             nombre: _nombre
         });    
     }
-  
     muestra();
+    
+    
+    
+  cargaTareas(listaGrupos[0][0], listaGrupos[0][1]);
 
 
 </script>
