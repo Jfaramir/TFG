@@ -49,8 +49,8 @@ for ($i = 0; $i < $numTareas; $i++) {
         <div class="collapse" id="collapseExample"  style="margin-top: 0.8%">
             <div class="card card-body  " style="height: 70px; width: 100%; ">
                 <div class="col" >
-                    <input  class="form-control" id="nombreTarea"type="text" style="height:40px; width: 150px; float: left "  placeholder="Nueva Tarea">
-                    <button class="btn btn-outline-success" onclick="nuevaTarea()" style="height:40px;"  >añadir </button>
+                    <input  class="form-control" id="nombreTarea"type="text" style="height:40px; width: 150px; float: left; margin-left: 42.5% "  placeholder="Nueva Tarea">
+                    <button class="btn btn-outline-success" onclick="nuevaTarea()" style="height:40px; margin-left: 34%"  >añadir </button>
                 </div>
             </div>
         </div>

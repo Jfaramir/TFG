@@ -1,1 +1,11 @@
-{"elements":{},"attributes":{"scr":{"context":"script"}}}
+{
+    "elements": {},
+    "attributes": {
+        "scr": {
+            "context": "script"
+        },
+        "aria-expanded": {
+            "context": "button"
+        }
+    }
+}

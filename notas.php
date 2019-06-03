@@ -114,9 +114,14 @@ ol{text-align:center;}
 ol li{display:inline;padding-right:1em;}
 ol li a{color:#fff;}
 </style>
+  <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
 </head>
-<body>
-  <ul>
+ 
+
+<div>
+    <button class="btn btn-secondary" onclick="nuevaNota()">nueva nota</button>
+  <ul  id="cajaNotas">
     <li>
       <a href="#">
         <h2>Título #1</h2>
@@ -129,48 +134,22 @@ ol li a{color:#fff;}
         <p>Contenido Texto #2</p>
       </a>
     </li>
-    <li>
-      <a href="#">
-        <h2>Título #3</h2>
-        <p>Contenido Texto #3</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Título #4</h2>
-        <p>Contenido Texto #4</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Título #5</h2>
-        <p>Contenido Texto #5</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Título #6</h2>
-        <p>Contenido Texto #6</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Título #2</h2>
-        <p>Contenido Texto #2</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Título #7</h2>
-        <p>Contenido Texto #7</p>
-      </a>
-    </li>
-    <li>
-      <a href="#">
-        <h2>Título #8</h2>
-        <p>Contenido Texto #8</p>
-      </a>
-    </li>
+  
   </ul>
-</body>
+      </div>
+
+
+<script>
+
+function nuevaNota(){
+    $('#cajaNotas').append(' <li><a href="#">  <h2>Título #8</h2> <p>Contenido Texto #8</p> </a> </li>');
+    
+    
+}
+
+
+</script>
+
+
+
 </html>

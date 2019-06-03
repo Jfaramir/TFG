@@ -17,7 +17,9 @@
     }
 
 </style>
+
 <html>
+    <script src="/path/to/bootstrap/js/bootstrap.min.js"></script>
 
     <div class="blue "id="formulario"style="padding: 15%; padding-top: 5%;height: 100%">
 

@@ -37,12 +37,16 @@ for ($i = 0; $i < $usuarios; $i++) {
 <html>
     <button type="button" class="btn  btn-outline-danger  btn-lg  " style="margin: 3%">Salir del grupo</button>
     
-    <div id="cajaParticipantes">
+    <div id="cajaParticipantes" style="margin-top: 4%">
+
         
         
     </div>
     
     <script>
+      var listaaIntegrantes = <?php echo json_encode($listaUsuarios) ?>;
+              var numUsuarios= <?php echo $usuarios ?>;
+
     
     
         
@@ -54,8 +58,12 @@ for ($i = 0; $i < $usuarios; $i++) {
         
         
         function cargaParticipantes(){
-            
+           
+            for (i = 0; i<numUsuarios;i++ ){
+            $('#cajaParticipantes').append(' <button type="button" class="btn  .btn-outline-info  btn-lg  " style="margin: 3%"> '+listaaIntegrantes[i][0]+'</button>');
+            }
         }
+        cargaParticipantes();
     
     
     
