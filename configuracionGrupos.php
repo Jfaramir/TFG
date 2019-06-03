@@ -60,7 +60,7 @@ for ($i = 0; $i < $usuarios; $i++) {
         function cargaParticipantes(){
            
             for (i = 0; i<numUsuarios;i++ ){
-            $('#cajaParticipantes').append(' <button type="button" class="btn  .btn-outline-info  btn-lg  " style="margin: 3%"> '+listaaIntegrantes[i][0]+'</button>');
+            $('#cajaParticipantes').append(' <button type="button" class="btn  btn-outline-info  btn-lg  " style="margin: 3%"> '+listaaIntegrantes[i][0]+'</button>');
             }
         }
         cargaParticipantes();
