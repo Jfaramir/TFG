@@ -11,7 +11,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
   </head>
-  <body id="contenedor">
+  <body id="contenedor" style="  overflow:hidden; ">
       <div class="site-wrapper">
   <div   class="site-wrapper-inner">
     <div class="cover-container">

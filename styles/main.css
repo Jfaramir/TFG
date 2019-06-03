@@ -33,9 +33,11 @@ body {
 }
 
 body {
+      background-color: rgba(0,0,0,0.8);
+
   background: url(../img/65041c75-c7be-400f-aa82-34e0c77f430d.jpg);
-  background-size: cover;
-  color: #fff;
+	
+
   text-align: center;
   font-family: 'Quicksand', sans-serif;
 }

@@ -28,18 +28,18 @@ for ($i = 0; $i < $numTareas; $i++) {
 }
 ?>
 <div>
-    <div id="cajaTituloGrupo"class="border border-white rounded d-flex flex-row" style="padding: 1%; border: 2px; margin-top: 1%"> 
+    <div id="cajaTituloGrupo"class="border d-flex flex-row" style="padding: 1%; background-color: #DDDDDD; height: 65px;width: 100%"> 
         <div class="p-2" 
              <label id="nombreGrupo"> <?php echo $nombre ?> </label>
         </div>
         <div class="ml-auto p-2">
-            <button  class="btn btn-dark border border-white rounded" onclick="cargaConfiguracion()">Configuracion</button>
+            <button  class="btn btn-secondary border border-white rounded" onclick="cargaConfiguracion()">Configuracion</button>
         </div>
     </div>
-    <div class="" style="margin-top: 2%">
-    </div>
+    
+  
  
-    <div id="cajaTareas" class=" list-group" >
+    <div id="cajaTareas" class=" list-group" style="margin-top: 2%" >
            <div  class=" border border-bottom border-white rounded " >
         <button class="btn btn-outline-success border  bg-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="height: 35px; width: 150px; ">
             nueva tarea
@@ -65,8 +65,7 @@ for ($i = 0; $i < $numTareas; $i++) {
         function muestra() {
             //  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> <a class="dropdown-item" href="#">Dropdown link</a> <a class="dropdown-item" href="#">Dropdown link</a> </div>
             for (i = 0; i < numTareas; i++) {
-                $("#cajaTareas").append(' <a id=""  onclick="contenidoTarea(' + listaTareas[i][0] + ')" class="list-group-item bg-dark" >' + listaTareas[i][1] + ' <div class="dropdown-menu" aria-labelledby="btnGroupDrop1" >\n\
-    \n\'<a class="dropdown-item" href="#">Dropdown link</a><a class="dropdown-item" href="#">Dropdown link</a></div>  </a>');
+                $("#cajaTareas").append(' <a id=""  onclick="contenidoTarea(' + listaTareas[i][0] + ')" class="list-group-item " style="margin-top:0.5%; background-color: #A1D2F1" >' + listaTareas[i][1] + '  </a>');
             }
 
 
@@ -78,7 +77,7 @@ for ($i = 0; $i < $numTareas; $i++) {
         }
 
         function contenidoTarea(_idTarea) {
-            $("#tareas").load('cargaContenido.php', {
+            $("#cajaTareas").load('cargaContenido.php', {
                 idTarea: _idTarea
             });
 
@@ -86,7 +85,6 @@ for ($i = 0; $i < $numTareas; $i++) {
         function nuevaTarea() {
             var _titulo = $('#nombreTarea').val();
             var nombreGrupo = $('#nombreGrupo').text();
-            $('#collapseExample').collapse('hide');
                     console.log("nombreGrupo"+nombreGrupo);
 
             

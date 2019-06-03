@@ -3,17 +3,18 @@ $idTarea = $_POST['idTarea'];
 ?>
 
 <html>
-
+    <div class="btn-group" role="group" aria-label="Basic example" style="margin-left: 38%; margin-bottom: 2%">
+  <button type="button" class="btn btn-secondary" onclick="cargaContenido(1);">Calendario</button>
+  <button type="button" class="btn btn-secondary">Notas</button>
+  <button type="button" class="btn btn-secondary">Archivos</button>
+    </div>
   
     <!--aqui se van a cargar el calendario -->
     <div id="cajaCalendario"> 
         
     </div>
 
-    <div id="cajaCosa">
-
-
-    </div>
+   
 
 
 
@@ -24,14 +25,24 @@ $idTarea = $_POST['idTarea'];
 
 
     <script>
+        
+           
+          function cargaContenido(condicion){
+              if(condicion === 1){
+                   $('#cajaCalendario').load('calendario.php');
 
-        var _idTarea = <?php $idTarea ?>
-//funcion   que carga las notas el la caja html
-        function cargaNotas() {
-            ('#cajaNotas').load('notas.php', {
-                idTarea: _idTarea
-            });
-        }
+              }
+             if(condicion ===2){
+                  $('#cajaCalendario').load('notas.php');
+                 
+             }
+             if(condicion === 3){
+                 
+             }
+          } 
+       cargaContenido(1);
+           
+        
         
     
     
@@ -45,11 +56,7 @@ $idTarea = $_POST['idTarea'];
     
     
    
-    
-    function cargaCalendario() {
-            $('#cajaCalendario').load('calendario.php');
-        }
-cargaCalendario();
+
      
     </script>   
 </html>

@@ -48,7 +48,7 @@ for ($i = 0; $i < $numGrupos; $i++) {
     var numGrupos = <?php echo $numGrupos ?>;
 function muestra() {
         for (i = 0; i < numGrupos; i++) {
-            $("#cajaGrupo").append(' <a id="grupo' + listaGrupos[i][0] + '" class="list-group-item list-group-item-action bg-dark " style="margin-top: 5px;" onclick="cargaTareas('+ listaGrupos[i][0] +','+"'"+listaGrupos[i][1] +"'"+')">' + listaGrupos[i][1] + '</a>');
+            $("#cajaGrupo").append(' <a id="grupo' + listaGrupos[i][0] + '" class="list-group-item list-group-item-action  " style="margin-top: 5px; background-color: #E67073" onclick="cargaTareas('+ listaGrupos[i][0] +','+"'"+listaGrupos[i][1] +"'"+')">' + listaGrupos[i][1] + '</a>');
             
         }
 
