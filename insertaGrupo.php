@@ -26,7 +26,7 @@ for ($i = 0; $i < count($listaAnnadidos); $i++) {
 ?>
 
 <html>
-    <script>
+    <script  type="text/javascript">
         var _email = '<?php echo $email; ?>';
        var _id = '<?php echo $idBueno; ?>';
        var __nombre = '<?php echo $nombre; ?>';

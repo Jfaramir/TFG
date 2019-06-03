@@ -5,7 +5,7 @@ $idTarea = $_POST['idTarea'];
 <html>
     <div class="btn-group" role="group" aria-label="Basic example" style="margin-left: 38%; margin-bottom: 2%">
   <button type="button" class="btn btn-secondary" onclick="cargaContenido(1);">Calendario</button>
-  <button type="button" class="btn btn-secondary">Notas</button>
+  <button type="button" class="btn btn-secondary" onclick="cargaContenido(2);">Notas</button>
   <button type="button" class="btn btn-secondary">Archivos</button>
     </div>
   

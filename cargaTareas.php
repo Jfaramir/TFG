@@ -28,12 +28,12 @@ for ($i = 0; $i < $numTareas; $i++) {
 }
 ?>
 <div>
-    <div id="cajaTituloGrupo"class="border d-flex flex-row" style="padding: 1%; background-color: #DDDDDD; height: 65px;width: 100%"> 
+    <div id="cajaTituloGrupo"class="border d-flex flex-row" style="padding: 1%; background-color: #DDDDDD; height: 65px;width: 100%;margin-bottom: 2%"> 
         <div class="p-2" 
              <label id="nombreGrupo"> <?php echo $nombre ?> </label>
         </div>
         <div class="ml-auto p-2">
-            <button  class="btn btn-secondary border border-white rounded" onclick="cargaConfiguracion()">Configuracion</button>
+            <button  class="btn btn-secondary border border-white rounded"  onclick="cargaConfiguracion()">Configuracion</button>
         </div>
     </div>
     
@@ -41,13 +41,13 @@ for ($i = 0; $i < $numTareas; $i++) {
  
     <div id="cajaTareas" class=" list-group" style="margin-top: 2%" >
            <div  class=" border border-bottom border-white rounded " >
-        <button class="btn btn-outline-success border  bg-dark" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample" style="height: 35px; width: 150px; ">
+        <button class="btn btn-outline-success border " type="button" data-toggle="collapse" data-target="#collapseExample"  aria-controls="collapseExample" style="height: 35px; width: 150px; ">
             nueva tarea
         </button>
     </div>
 
-        <div class="collapse" id="collapseExample">
-            <div class="card card-body bg-dark " style="height: 70px; width: 100%; ">
+        <div class="collapse" id="collapseExample"  style="margin-top: 0.8%">
+            <div class="card card-body  " style="height: 70px; width: 100%; ">
                 <div class="col" >
                     <input  class="form-control" id="nombreTarea"type="text" style="height:40px; width: 150px; float: left "  placeholder="Nueva Tarea">
                     <button class="btn btn-outline-success" onclick="nuevaTarea()" style="height:40px;"  >añadir </button>
