@@ -11,7 +11,7 @@
 
     .modal, .modal-backdrop {
         position: absolute !important;
-        margin-top: 5%;
+        
         margin-left: 15%;
     }
     .modal-backdrop{
@@ -26,9 +26,12 @@
     <div class="blue "id="formulario"style="padding: 15%; padding-top: 5%;height: 100%;" >
 
         <div style=" background-color: #9ED3D1">
-        <div class="" style="margin-top: 10%; ">
+            
+        <div class="" style="margin-top: 5%; ">
+            <br>
             <h1 for="exampleFormControlInput1">Nombre del Grupo</h1>
-            <input type="text" class="form-control" id="cajaNomobreGrupo" >
+            <br>
+            <input type="text" class="form-control" id="cajaNomobreGrupo" style="margin-left: 3%; width: 94%; margin-right: 3%" >
         </div>
 
         <br><br>
@@ -37,12 +40,15 @@
         <div id="usuariosNuevos"></div>
         <br>
         <br>
-        <button class="btn  btn-outline-success  btn-lg   " style="float:left; margin-left: 33%; margin-top: 5%;" onclick="creaGrupo()">Crear Grupo</button>
-        <button type="button" class="btn  btn-outline-danger  btn-lg  " style="margin-left: 3%; margin-top: 5%; float: left;">Salir del grupo</button>
+        <button type="button" class="btn  btn-outline-danger btn-lg   " style="float:left; margin-left: 35%; margin-top: 5%;">Cancelar</button>
+        <button  class="btn  btn-outline-success   btn-lg  " style="margin-left: 3%; margin-top: 5%; float: left;"  onclick="creaGrupo()"> Crear Grupo</button>
         <br>
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        
         
         
         
