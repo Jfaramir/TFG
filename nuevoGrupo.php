@@ -23,35 +23,35 @@
 
     <div class="blue "id="formulario"style="padding: 15%; padding-top: 5%;height: 100%">
 
-        <div class="">
+        <div class="" style="margin-top: 15%; ">
             <label for="exampleFormControlInput1">Nombre del Grupo</label>
             <input type="text" class="form-control" id="cajaNomobreGrupo" >
         </div>
 
         <br><br>
         <button id="botonModal" class="btn"onclick="abreModal()">Agregar usuario</button>
-        <br><br><br><br>
+        <br><br>
         <div id="usuariosNuevos"></div>
-        <br><br><br><br>
+        <br><br>
         <button class="btn " onclick="creaGrupo()">Crear Grupo</button>
 
         <br><br>
-        <span id="alertas" class="label "></span>
+        <span id="alertas" class="label " style="height: 200px; color: black;"></span>
 
 
 
 
         <!-- Modal -->
-        <div id="myModal" class="modal fade bg-dark" role="dialog">
+        <div id="myModal" class="modal " role="dialog">
             <div class="modal-dialog">
 
                 <!-- Modal content-->
                 <div class="modal-content" >
-                    <div class="modal-header">
+                    <div class="modal-header"><!-- busqueda en modal -->
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <input id="cajabusqueda" class="form-control"  placeholder="Search" aria-label="Search" onkeyup="cargaUsuarios()" style="margin-left: 5%">
                     </div>
-                    <div class="modal-body" id="usuarios" style="height: 200px">     
+                    <div class="modal-body" id="usuarios" style="height: 200px; color: white;">  <!-- Usuarios -->    
                     </div>
 
                 </div>
@@ -104,7 +104,7 @@
                         console.log('ese usuario ya esta añadido');
                     } else {
                         $('#us'+id).hide();
-                        $('#usuariosNuevos').append('<div  style="background-color: white; float: left; margin-left:10px;" ><b>' + nombre + '<b></div>');
+                        $('#usuariosNuevos').append('<div  style="background-color: white; float: left; margin-left:43%;" ><b>' + nombre + '<b></div> <br> ');
                         listaAnnadidos[listaAnnadidos.length] = id;
 
                     }

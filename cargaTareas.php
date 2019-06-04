@@ -65,7 +65,7 @@ for ($i = 0; $i < $numTareas; $i++) {
         function muestra() {
             //  <div class="dropdown-menu" aria-labelledby="btnGroupDrop1"> <a class="dropdown-item" href="#">Dropdown link</a> <a class="dropdown-item" href="#">Dropdown link</a> </div>
             for (i = 0; i < numTareas; i++) {
-                $("#cajaTareas").append(' <a id=""  onclick="contenidoTarea(' + listaTareas[i][0] + ')" class="list-group-item " style="margin-top:0.5%;cursor:pointer; background-color: #A1D2F1" >' + listaTareas[i][1] + '  </a>');
+                $("#cajaTareas").append(' <a id=""  onclick="contenidoTarea(' + listaTareas[i][0] + ')" class="list-group-item " style="margin-top:0.5%;cursor:pointer; background-color: #A1D2F1; width:95% float:left;" >' + listaTareas[i][1]  + ' <img src="img/PUNTOS-SUSPENSIVOS.png" style="height:20px; float:right;" >   </a>');
             }
 
 
