@@ -11,6 +11,8 @@
 
     .modal, .modal-backdrop {
         position: absolute !important;
+        margin-top: 5%;
+        margin-left: 15%;
     }
     .modal-backdrop{
         opacity: 0 !important;
@@ -21,7 +23,7 @@
 <html>
     <script src="/path/to/bootstrap/js/bootstrap.min.js"></script>
 
-    <div class="blue "id="formulario"style="padding: 10%; padding-top: 5%;height: 100%;" >
+    <div class="blue "id="formulario"style="padding: 15%; padding-top: 5%;height: 100%;" >
 
         <div style=" background-color: #9ED3D1">
         <div class="" style="margin-top: 10%; ">
@@ -30,7 +32,7 @@
         </div>
 
         <br><br>
-        <button id="botonModal" class="btn"onclick="abreModal()">Agregar usuario</button>
+        <button id="botonModal" class="btn" onclick="abreModal()" >Agregar usuario</button>
         <br><br>
         <div id="usuariosNuevos"></div>
         <br>
