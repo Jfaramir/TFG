@@ -108,13 +108,19 @@
         
   </div>
 </div>
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="js/popper.min.js" type="text/javascript"></script>
+
+     <script src="scripts/main.js"></script>
+
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+           
+
     <script src="scripts/main.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="scripts/login.js"></script>
+
     
     <script> 
         

@@ -1,11 +1,10 @@
-<?php
+<?ph3
 $nombre;
 ?>
 
-<html >
-    <script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <link href="styles/simple-sidebar.css" rel="stylesheet" style="background-color: white">
+<html>
+    <link href="styles/simple-sidebar.css" rel="stylesheet" >
+
     <div >
         <div >
             <div class="d-flex " id="wrapper" style=" width: 90%; margin-top:2%; margin-right:5%; margin-left:5%; height: 75%;" >
@@ -14,18 +13,20 @@ $nombre;
                 <!-- Sidebar -->
                 <div class="border border" id="sidebar-wrapper" style=" background-color: white">
                     <div class="sidebar-heading" style="background-color: #DDDDDD">
-                        <a >   
-                            <div class="dropdown">
-                                <button class="btn btn dropdown-toggle "id="dropdownMenuButton" data-toggle="dropdown"  style="border: 0px; float: left">  <img src="img/usuario.png" style="width: 20px; height: 20px">    </button> 
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Action</a>
-                                    <a class="dropdown-item" href="#">Another action</a>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
+          
+                        <div style=" float: left">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="border: 0px; float: left"> 
+                                <img src="img/usuario.png" style="width: 20px; height: 20px">                 </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" ><?php  echo $nombre ?></a>
+                                <a class="dropdown-item" >Configuracion</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="index.php">sign out</a>
+                            </div>
                             </div>
 
-                        </a> 
-                        <button class="btn btn-secondary" style="margin-left: 50%; " onclick="nuevoGrupo()">+</button> 
+    
+                        <button class="btn btn-secondary" style="margin-left: 30%; width: 40px; height: 40px " onclick="nuevoGrupo()">+</button> 
 
 
 
