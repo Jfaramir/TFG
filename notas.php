@@ -133,27 +133,29 @@
             <li>
                 <a href="#">
 
-                    <input type="text" value="TITULO" style="background-color:transparent; border:1px; width: 80%; text-align: center">
+                    <input type="text" placeholder="TITULO" style="background-color:transparent; border:1px; width: 80%; text-align: center">
 
                     <p>
-                    <textarea name="text" cols="25" rows="5" style="background-color:transparent; border: 1px">
-escribe el contenido de la nota aqui</textarea>
+                    <textarea name="text" cols="25" placeholder="escribe el contenido de la nota aqui" rows="5" style="background-color:transparent; border: 1px">
+</textarea>
                     
                     </p>
                 </a>
             </li>
            <li>
+                 <li>
                 <a href="#">
 
-                    <input type="text" value="TITULO" style="background-color:transparent; border:1px; width: 80%; text-align: center">
+                    <input type="text" placeholder="TITULO" style="background-color:transparent; border:1px; width: 80%; text-align: center">
 
                     <p>
-                    <textarea name="text" cols="25" rows="5" style="background-color:transparent; border: 1px">
-escribe el contenido de la nota aqui</textarea>
+                    <textarea name="text" cols="25" placeholder="escribe el contenido de la nota aqui" rows="5" style="background-color:transparent; border: 1px">
+</textarea>
                     
                     </p>
                 </a>
             </li>
+           <li>
 
         </ul>
     </div>
@@ -162,7 +164,7 @@ escribe el contenido de la nota aqui</textarea>
     <script>
 
         function nuevaNota() {
-            $('#cajaNotas').append(' <li> <a href="#"> <input type="text" value="TITULO" style="background-color:transparent; border:1px; width: 80%; text-align: center">   <p><textarea name="text" cols="25" rows="5" style="background-color:transparent; border: 1px">escribe el contenido de la nota aqui</textarea> </p> </a>            </li>');
+            $('#cajaNotas').append(' <li> <a href="#"> <input type="text" placeholder="TITULO" style="background-color:transparent; border:1px; width: 80%; text-align: center">   <p><textarea name="text" cols="25" rows="5"placeholder="escribe el contenido de la nota aqui" style="background-color:transparent; border: 1px"></textarea> </p> </a>            </li>');
 
 
         }

@@ -33,9 +33,13 @@ body {
 }
 
 body {
-      background-color: rgba(0,0,0,0.8);
+     background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(../img/65041c75-c7be-400f-aa82-34e0c77f430d.jpg);
 
-  background: url(../img/65041c75-c7be-400f-aa82-34e0c77f430d.jpg);
 	
 
   text-align: center;

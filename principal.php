@@ -7,11 +7,11 @@ $nombre;
 
     <div >
         <div >
-            <div class="d-flex " id="wrapper" style=" width: 90%; margin-top:2%; margin-right:5%; margin-left:5%; height: 75%;" >
+            <div class="d-flex " id="wrapper" style=" width: 90%; margin-top:3%; margin-right:5%; margin-left:5%; height: 75%;" >
 
 
                 <!-- Sidebar -->
-                <div class="border border" id="sidebar-wrapper" style=" background-color: white">
+                <div class="" id="sidebar-wrapper" style=" background-color: white">
                     <div class="sidebar-heading" style="background-color: #DDDDDD">
           
                         <div style=" float: left">
@@ -42,7 +42,7 @@ $nombre;
                 <!-- Page Content -->
                 <div id="page-content-wrapper" style=" ">
 
-                    <div id="tareas"  class="container-fluid border-bottom" style="overflow-y: auto; height: 706px; border: 2px;  width: 98%; background-color: white">
+                    <div id="tareas"  class="container-fluid" style="overflow-y: auto; height: 706px; border: 2px;  width: 98%; background-color: white">
                         <div style=" width: 100%; height: 65px; background-color: #DDDDDD"></div>
                     </div>
                 </div>
