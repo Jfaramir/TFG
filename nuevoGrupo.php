@@ -21,10 +21,11 @@
 <html>
     <script src="/path/to/bootstrap/js/bootstrap.min.js"></script>
 
-    <div class="blue "id="formulario"style="padding: 15%; padding-top: 5%;height: 100%">
+    <div class="blue "id="formulario"style="padding: 10%; padding-top: 5%;height: 100%;" >
 
-        <div class="" style="margin-top: 15%; ">
-            <label for="exampleFormControlInput1">Nombre del Grupo</label>
+        <div style=" background-color: #9ED3D1">
+        <div class="" style="margin-top: 10%; ">
+            <h1 for="exampleFormControlInput1">Nombre del Grupo</h1>
             <input type="text" class="form-control" id="cajaNomobreGrupo" >
         </div>
 
@@ -32,13 +33,21 @@
         <button id="botonModal" class="btn"onclick="abreModal()">Agregar usuario</button>
         <br><br>
         <div id="usuariosNuevos"></div>
-        <br><br>
-        <button class="btn " onclick="creaGrupo()">Crear Grupo</button>
-
+        <br>
+        <br>
+        <button class="btn  btn-outline-success  btn-lg   " style="float:left; margin-left: 33%; margin-top: 5%;" onclick="creaGrupo()">Crear Grupo</button>
+        <button type="button" class="btn  btn-outline-danger  btn-lg  " style="margin-left: 3%; margin-top: 5%; float: left;">Salir del grupo</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        
+        
+        
         <br><br>
         <span id="alertas" class="label " style="height: 200px; color: black;"></span>
-
-
+        </div>
+    </div>
 
 
         <!-- Modal -->
@@ -104,7 +113,7 @@
                         console.log('ese usuario ya esta añadido');
                     } else {
                         $('#us'+id).hide();
-                        $('#usuariosNuevos').append('<div  style="background-color: white; float: left; margin-left:43%;" ><b>' + nombre + '<b></div> <br> ');
+                        $('#usuariosNuevos').append('<div  style="background-color: white; float: left; margin-left:3%; " ><button type="button" class="btn  btn-outline-info  btn-lg  "  >' + nombre + '</button> </div>');
                         listaAnnadidos[listaAnnadidos.length] = id;
 
                     }
